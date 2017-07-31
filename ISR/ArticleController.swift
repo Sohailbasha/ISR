@@ -17,7 +17,7 @@ class ArticleController {
     static func fetchArticleFor(source: Source, completion: @escaping (_ articles: [Article]) -> Void) {
         
         guard let url = baseURL else { fatalError("URL Optional is nil") }
-        let urlParameters = ["source":"\(source.id)", "sortBy":"latest", "apiKey":"\(apiKey)"]
+        let urlParameters = ["source":"\(source.id)", "apiKey":"\(apiKey)"]
         
         NetworkController.performRequest(for: url, httpMethod: .get, urlParameters: urlParameters) { (data, error) in
             guard let data = data, let responseString = String(data: data, encoding: .utf8) else {

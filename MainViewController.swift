@@ -29,6 +29,7 @@ class MainViewController: UIViewController {
     var sources: [Source] = []
     
     
+    
     @IBOutlet var collectionView: UICollectionView!
     
     
@@ -36,16 +37,15 @@ class MainViewController: UIViewController {
      // MARK: - Navigation
     
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "show" {
             if let destinationVC = segue.destination as? NewsListViewController {
-                
+                if let indexPath = collectionView.indexPathsForSelectedItems?.first {
+                    let source = sources[indexPath.row]
+                    destinationVC.source = source
+                }
             }
         }
-        
      }
- 
-    
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -62,10 +62,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let source = sources[indexPath.row]
-        ArticleController.fetchArticleFor(source: source) { (article) in
-            print(article)
-        }
+//        let source = sources[indexPath.row]
+//        ArticleController.fetchArticleFor(source: source) { (article) in
+//            print(article)
+//        }
         
     }
     

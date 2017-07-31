@@ -12,9 +12,12 @@ class StoryCollectionViewCell: UICollectionViewCell {
     
     
     func updateWith(article: Article) {
-        titleOutlet.text = article.title
-        authorOutlet.text = article.author
-        textView.text = article.description
+        DispatchQueue.main.async {
+            self.titleOutlet.text = article.title
+            self.authorOutlet.text = article.author
+            self.textView.text = article.description
+        }
+
     }
     
     
