@@ -16,6 +16,8 @@
 		FD200FA51F2F90F80029574E /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FA41F2F90F80029574E /* Source.swift */; };
 		FD200FA71F2F94C50029574E /* SourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FA61F2F94C50029574E /* SourceController.swift */; };
 		FD200FAC1F2FA9A20029574E /* SourceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FAB1F2FA9A20029574E /* SourceCollectionViewCell.swift */; };
+		FD200FAF1F2FB9D50029574E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FAE1F2FB9D50029574E /* Article.swift */; };
+		FD200FB11F2FBBC80029574E /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB01F2FBBC80029574E /* ArticleController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		FD200FA41F2F90F80029574E /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		FD200FA61F2F94C50029574E /* SourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceController.swift; sourceTree = "<group>"; };
 		FD200FAB1F2FA9A20029574E /* SourceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCollectionViewCell.swift; sourceTree = "<group>"; };
+		FD200FAE1F2FB9D50029574E /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		FD200FB01F2FBBC80029574E /* ArticleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				FD200FA41F2F90F80029574E /* Source.swift */,
+				FD200FAE1F2FB9D50029574E /* Article.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				FD200FA61F2F94C50029574E /* SourceController.swift */,
+				FD200FB01F2FBBC80029574E /* ArticleController.swift */,
 			);
 			name = "Model Controller";
 			sourceTree = "<group>";
@@ -181,7 +187,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD200FAF1F2FB9D50029574E /* Article.swift in Sources */,
 				FD200FA71F2F94C50029574E /* SourceController.swift in Sources */,
+				FD200FB11F2FBBC80029574E /* ArticleController.swift in Sources */,
 				FD200FA51F2F90F80029574E /* Source.swift in Sources */,
 				FD200F8F1F2F8FBE0029574E /* AppDelegate.swift in Sources */,
 				FD200FAC1F2FA9A20029574E /* SourceCollectionViewCell.swift in Sources */,

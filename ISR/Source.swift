@@ -22,11 +22,7 @@ struct Source {
     
     
     init?(dictionary: [String:Any]) {
-//        if let id = dictionary[idKey] as? String, let name = dictionary[nameKey] as? String, let description = dictionary[descriptionKey] as? String {
-//            self.id = id
-//            self.name = name
-//            self.description = description
-//        }
+
         
         guard  let id = dictionary[idKey] as? String, let name = dictionary[nameKey] as? String, let description = dictionary[descriptionKey] as? String else {
             return nil }
