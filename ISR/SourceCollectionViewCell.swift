@@ -10,4 +10,12 @@ import UIKit
 
 class SourceCollectionViewCell: UICollectionViewCell {
     
+
+    func updateWith(source: Source) {
+        DispatchQueue.main.async {
+            self.sourceName.text = source.name
+        }
+    }
+    
+    @IBOutlet var sourceName: UILabel!
 }

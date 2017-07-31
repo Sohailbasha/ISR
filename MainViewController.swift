@@ -9,21 +9,22 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
         SourceController.fetchSources { (sources) in
             self.sources = sources
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
         
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-
     
-    var sources: [Source]?
+    var sources: [Source] = []
     
     
     @IBOutlet var collectionView: UICollectionView!
@@ -31,30 +32,45 @@ class MainViewController: UIViewController {
     
     
     
-
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sources?.count ?? 0
+        return sources.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sourceCell", for: indexPath)
-        
-        
-        return cell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sourceCell", for: indexPath) as? SourceCollectionViewCell
+//        guard let source = sources[indexPath.row] else {return UICollectionViewCell() }
+        let source = sources[indexPath.row]
+        cell?.updateWith(source: source)
+        return cell ?? UICollectionViewCell()
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

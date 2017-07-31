@@ -13,6 +13,10 @@ class SourceController {
     let sharedInstance = SourceController()
     
     static let sourceURL = URL(string: "https://newsapi.org/v1/sources")
+    
+    
+    
+    
 
     static func fetchSources(completion: @escaping (_ sources: [Source]) -> Void) {
         
