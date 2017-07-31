@@ -19,7 +19,7 @@
 		FD200FAF1F2FB9D50029574E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FAE1F2FB9D50029574E /* Article.swift */; };
 		FD200FB11F2FBBC80029574E /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB01F2FBBC80029574E /* ArticleController.swift */; };
 		FD200FB51F2FC5A50029574E /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB41F2FC5A50029574E /* NewsListViewController.swift */; };
-		FD200FB71F2FC5D60029574E /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB61F2FC5D60029574E /* StoryCollectionViewCell.swift */; };
+		FD200FB91F2FC65F0029574E /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB81F2FC65F0029574E /* StoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		FD200FAE1F2FB9D50029574E /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		FD200FB01F2FBBC80029574E /* ArticleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 		FD200FB41F2FC5A50029574E /* NewsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsListViewController.swift; path = ../NewsListViewController.swift; sourceTree = "<group>"; };
-		FD200FB61F2FC5D60029574E /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		FD200FB81F2FC65F0029574E /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				FD200FAB1F2FA9A20029574E /* SourceCollectionViewCell.swift */,
-				FD200FB61F2FC5D60029574E /* StoryCollectionViewCell.swift */,
+				FD200FB81F2FC65F0029574E /* StoryCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD200FB71F2FC5D60029574E /* StoryCollectionViewCell.swift in Sources */,
+				FD200FB91F2FC65F0029574E /* StoryCollectionViewCell.swift in Sources */,
 				FD200FAF1F2FB9D50029574E /* Article.swift in Sources */,
 				FD200FA71F2F94C50029574E /* SourceController.swift in Sources */,
 				FD200FB11F2FBBC80029574E /* ArticleController.swift in Sources */,
