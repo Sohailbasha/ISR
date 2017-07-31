@@ -14,6 +14,9 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         
+        SourceController.fetchSources { (sources) in
+            print(sources)
+        }
     }
 
 
