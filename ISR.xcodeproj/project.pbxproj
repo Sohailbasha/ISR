@@ -20,6 +20,7 @@
 		FD200FB11F2FBBC80029574E /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB01F2FBBC80029574E /* ArticleController.swift */; };
 		FD200FB51F2FC5A50029574E /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB41F2FC5A50029574E /* NewsListViewController.swift */; };
 		FD200FB91F2FC65F0029574E /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB81F2FC65F0029574E /* StoryCollectionViewCell.swift */; };
+		FD200FBB1F2FEF240029574E /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FBA1F2FEF240029574E /* ImageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FD200FB01F2FBBC80029574E /* ArticleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 		FD200FB41F2FC5A50029574E /* NewsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsListViewController.swift; path = ../NewsListViewController.swift; sourceTree = "<group>"; };
 		FD200FB81F2FC65F0029574E /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		FD200FBA1F2FEF240029574E /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				FD200FA91F2FA7C10029574E /* Model Controller */,
 				FD200FAA1F2FA7C80029574E /* View Controller */,
 				FD200FA21F2F902B0029574E /* NetworkController.swift */,
+				FD200FBA1F2FEF240029574E /* ImageController.swift */,
 				FD200F8E1F2F8FBE0029574E /* AppDelegate.swift */,
 				FD200F951F2F8FBE0029574E /* Assets.xcassets */,
 				FD200F921F2F8FBE0029574E /* Main.storyboard */,
@@ -199,6 +202,7 @@
 				FD200FB11F2FBBC80029574E /* ArticleController.swift in Sources */,
 				FD200FA51F2F90F80029574E /* Source.swift in Sources */,
 				FD200F8F1F2F8FBE0029574E /* AppDelegate.swift in Sources */,
+				FD200FBB1F2FEF240029574E /* ImageController.swift in Sources */,
 				FD200FAC1F2FA9A20029574E /* SourceCollectionViewCell.swift in Sources */,
 				FD200FB51F2FC5A50029574E /* NewsListViewController.swift in Sources */,
 				FD200FA11F2F8FD90029574E /* MainViewController.swift in Sources */,
@@ -366,6 +370,7 @@
 				FD200F9F1F2F8FBE0029574E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

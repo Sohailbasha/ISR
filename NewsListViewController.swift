@@ -46,8 +46,8 @@ extension NewsListViewController: UICollectionViewDelegate, UICollectionViewData
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as? StoryCollectionViewCell
-        
-        
+        let article = articles[indexPath.row]
+        cell?.updateWith(article: article)
         return cell ?? UICollectionViewCell()
     }
     
