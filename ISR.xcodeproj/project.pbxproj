@@ -15,6 +15,7 @@
 		FD200FA31F2F902B0029574E /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FA21F2F902B0029574E /* NetworkController.swift */; };
 		FD200FA51F2F90F80029574E /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FA41F2F90F80029574E /* Source.swift */; };
 		FD200FA71F2F94C50029574E /* SourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FA61F2F94C50029574E /* SourceController.swift */; };
+		FD200FAC1F2FA9A20029574E /* SourceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FAB1F2FA9A20029574E /* SourceCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FD200FA21F2F902B0029574E /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		FD200FA41F2F90F80029574E /* Source.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		FD200FA61F2F94C50029574E /* SourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceController.swift; sourceTree = "<group>"; };
+		FD200FAB1F2FA9A20029574E /* SourceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,50 @@
 		FD200F8D1F2F8FBE0029574E /* ISR */ = {
 			isa = PBXGroup;
 			children = (
-				FD200F921F2F8FBE0029574E /* Main.storyboard */,
-				FD200FA41F2F90F80029574E /* Source.swift */,
-				FD200FA61F2F94C50029574E /* SourceController.swift */,
-				FD200FA01F2F8FD90029574E /* MainViewController.swift */,
+				FD200FA81F2FA7BB0029574E /* Model */,
+				FD200FAD1F2FA9A90029574E /* View */,
+				FD200FA91F2FA7C10029574E /* Model Controller */,
+				FD200FAA1F2FA7C80029574E /* View Controller */,
 				FD200FA21F2F902B0029574E /* NetworkController.swift */,
 				FD200F8E1F2F8FBE0029574E /* AppDelegate.swift */,
 				FD200F951F2F8FBE0029574E /* Assets.xcassets */,
+				FD200F921F2F8FBE0029574E /* Main.storyboard */,
 				FD200F971F2F8FBE0029574E /* LaunchScreen.storyboard */,
 				FD200F9A1F2F8FBE0029574E /* Info.plist */,
 			);
 			path = ISR;
+			sourceTree = "<group>";
+		};
+		FD200FA81F2FA7BB0029574E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD200FA41F2F90F80029574E /* Source.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FD200FA91F2FA7C10029574E /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD200FA61F2F94C50029574E /* SourceController.swift */,
+			);
+			name = "Model Controller";
+			sourceTree = "<group>";
+		};
+		FD200FAA1F2FA7C80029574E /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FD200FA01F2F8FD90029574E /* MainViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		FD200FAD1F2FA9A90029574E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FD200FAB1F2FA9A20029574E /* SourceCollectionViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +184,7 @@
 				FD200FA71F2F94C50029574E /* SourceController.swift in Sources */,
 				FD200FA51F2F90F80029574E /* Source.swift in Sources */,
 				FD200F8F1F2F8FBE0029574E /* AppDelegate.swift in Sources */,
+				FD200FAC1F2FA9A20029574E /* SourceCollectionViewCell.swift in Sources */,
 				FD200FA11F2F8FD90029574E /* MainViewController.swift in Sources */,
 				FD200FA31F2F902B0029574E /* NetworkController.swift in Sources */,
 			);

@@ -17,13 +17,16 @@ class MainViewController: UIViewController {
         SourceController.fetchSources { (sources) in
             self.sources = sources
         }
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 
     
     var sources: [Source]?
     
     
-    
+    @IBOutlet var collectionView: UICollectionView!
     
     
     
@@ -39,4 +42,19 @@ class MainViewController: UIViewController {
     }
     */
 
+}
+
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return sources?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sourceCell", for: indexPath)
+        
+        
+        return cell
+    }
+    
 }
