@@ -22,6 +22,8 @@ class MainViewController: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        
     }
     
     var sources: [Source] = []
@@ -52,10 +54,17 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sourceCell", for: indexPath) as? SourceCollectionViewCell
-//        guard let source = sources[indexPath.row] else {return UICollectionViewCell() }
         let source = sources[indexPath.row]
         cell?.updateWith(source: source)
         return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let source = sources[indexPath.row]
+        ArticleController.fetchArticleFor(source: source) { (article) in
+            print(article)
+        }
+        
     }
     
 }

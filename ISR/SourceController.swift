@@ -10,7 +10,7 @@ import Foundation
 
 class SourceController {
     
-    let sharedInstance = SourceController()
+    static let sharedInstance = SourceController()
     
     static let sourceURL = URL(string: "https://newsapi.org/v1/sources")
     
