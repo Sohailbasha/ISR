@@ -15,11 +15,15 @@ class MainViewController: UIViewController {
 
         
         SourceController.fetchSources { (sources) in
-            print(sources)
+            self.sources = sources
         }
     }
 
-
+    
+    var sources: [Source]?
+    
+    
+    
     
     
     
