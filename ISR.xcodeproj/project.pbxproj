@@ -21,6 +21,7 @@
 		FD200FB51F2FC5A50029574E /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB41F2FC5A50029574E /* NewsListViewController.swift */; };
 		FD200FB91F2FC65F0029574E /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FB81F2FC65F0029574E /* StoryCollectionViewCell.swift */; };
 		FD200FBB1F2FEF240029574E /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FBA1F2FEF240029574E /* ImageController.swift */; };
+		FD200FBE1F300D910029574E /* DisplayLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD200FBD1F300D910029574E /* DisplayLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FD200FB41F2FC5A50029574E /* NewsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsListViewController.swift; path = ../NewsListViewController.swift; sourceTree = "<group>"; };
 		FD200FB81F2FC65F0029574E /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		FD200FBA1F2FEF240029574E /* ImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
+		FD200FBD1F300D910029574E /* DisplayLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +78,8 @@
 				FD200FAD1F2FA9A90029574E /* View */,
 				FD200FA91F2FA7C10029574E /* Model Controller */,
 				FD200FAA1F2FA7C80029574E /* View Controller */,
-				FD200FA21F2F902B0029574E /* NetworkController.swift */,
-				FD200FBA1F2FEF240029574E /* ImageController.swift */,
+				FD200FBC1F300D470029574E /* Tools */,
+				FD200FBD1F300D910029574E /* DisplayLayout.swift */,
 				FD200F8E1F2F8FBE0029574E /* AppDelegate.swift */,
 				FD200F951F2F8FBE0029574E /* Assets.xcassets */,
 				FD200F921F2F8FBE0029574E /* Main.storyboard */,
@@ -121,6 +123,15 @@
 				FD200FB81F2FC65F0029574E /* StoryCollectionViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		FD200FBC1F300D470029574E /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FD200FA21F2F902B0029574E /* NetworkController.swift */,
+				FD200FBA1F2FEF240029574E /* ImageController.swift */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				FD200FB11F2FBBC80029574E /* ArticleController.swift in Sources */,
 				FD200FA51F2F90F80029574E /* Source.swift in Sources */,
 				FD200F8F1F2F8FBE0029574E /* AppDelegate.swift in Sources */,
+				FD200FBE1F300D910029574E /* DisplayLayout.swift in Sources */,
 				FD200FBB1F2FEF240029574E /* ImageController.swift in Sources */,
 				FD200FAC1F2FA9A20029574E /* SourceCollectionViewCell.swift in Sources */,
 				FD200FB51F2FC5A50029574E /* NewsListViewController.swift in Sources */,
