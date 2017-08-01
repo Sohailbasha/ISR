@@ -22,8 +22,8 @@ class StoryCollectionViewCell: UICollectionViewCell {
         
         DispatchQueue.main.async {
             self.titleOutlet.text = article.title
-            self.authorOutlet.text = article.author
-            self.textView.text = article.description
+//            self.authorOutlet.text = article.author
+//            self.textView.text = article.description
         }
         
         ImageController.image(forURL: article.imageEndPoint, completion: { (articleImage) in

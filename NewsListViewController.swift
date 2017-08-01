@@ -52,6 +52,19 @@ extension NewsListViewController: UICollectionViewDelegate, UICollectionViewData
         return cell ?? UICollectionViewCell()
     }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var visableRect = CGRect()
+        visableRect.origin = collectionView.contentOffset
+        visableRect.size = collectionView.bounds.size
+        
+        let visablePoint = CGPoint(x: visableRect.midX, y: visableRect.midY)
+        guard let visableIndexPath: IndexPath = collectionView.indexPathForItem(at: visablePoint) else { return }
+        
+        let article = articles[visableIndexPath.row]
+        
+        
+        print(visableIndexPath)
+    }
     
 }
 
