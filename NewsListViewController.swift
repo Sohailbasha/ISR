@@ -24,15 +24,16 @@ class NewsListViewController: UIViewController {
                 }
             })
         }
-        
     }
     
-    var source: Source?
+    // MARK: - Properties
     
+    var source: Source?
     var articles: [Article] = []
     
+    // MARK: - OUtlets
+    
     @IBOutlet var collectionView: UICollectionView!
-
 
 }
 

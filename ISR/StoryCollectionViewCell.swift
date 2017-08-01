@@ -11,13 +11,26 @@ import UIKit
 class StoryCollectionViewCell: UICollectionViewCell {
     
     
+    override func draw(_ rect: CGRect) {
+        self.layer.cornerRadius = 20
+    }
+    
+    
+    
+    
     func updateWith(article: Article) {
+        
         DispatchQueue.main.async {
             self.titleOutlet.text = article.title
             self.authorOutlet.text = article.author
             self.textView.text = article.description
         }
-
+        
+        ImageController.image(forURL: article.imageEndPoint, completion: { (articleImage) in
+            if let image = articleImage {
+                self.imageView.image = image
+            }
+        })
     }
     
     

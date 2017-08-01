@@ -14,7 +14,12 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         SourceController.fetchSources { (sources) in
+
             self.sources = sources
+            self.sources.remove(at: 5)
+            self.sources.remove(at: 2)
+            self.sources.remove(at: 1)
+            
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
@@ -26,9 +31,13 @@ class MainViewController: UIViewController {
         
     }
     
+    
+    // MARK: - Properties
+    
     var sources: [Source] = []
     
     
+    // MARK: - Outlets
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -60,15 +69,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell?.updateWith(source: source)
         return cell ?? UICollectionViewCell()
     }
-    
+    /*
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let source = sources[indexPath.row]
-//        ArticleController.fetchArticleFor(source: source) { (article) in
-//            print(article)
-//        }
-        
+
     }
-    
+    */
 }
 
 
