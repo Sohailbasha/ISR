@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
             if let destinationVC = segue.destination as? NewsListViewController {
                 if let indexPath = collectionView.indexPathsForSelectedItems?.first {
                     let source = sources[indexPath.row]
+                    destinationVC.title = source.name
                     destinationVC.source = source
                 }
             }

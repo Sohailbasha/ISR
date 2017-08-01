@@ -24,6 +24,7 @@ class NewsListViewController: UIViewController {
                 }
             })
         }
+        
     }
     
     // MARK: - Properties
@@ -31,9 +32,13 @@ class NewsListViewController: UIViewController {
     var source: Source?
     var articles: [Article] = []
     
+    var currentArticle: Article?
+    
     // MARK: - OUtlets
     
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var textViewOutlet: UITextView!
+    
 
 }
 
@@ -60,8 +65,11 @@ extension NewsListViewController: UICollectionViewDelegate, UICollectionViewData
         let visablePoint = CGPoint(x: visableRect.midX, y: visableRect.midY)
         guard let visableIndexPath: IndexPath = collectionView.indexPathForItem(at: visablePoint) else { return }
         
+
         let article = articles[visableIndexPath.row]
         
+        self.currentArticle = article
+        textViewOutlet.text = article.description
         
         print(visableIndexPath)
     }
