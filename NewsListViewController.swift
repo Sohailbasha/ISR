@@ -21,6 +21,7 @@ class NewsListViewController: UIViewController {
                 self.articles = article
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
+                    self.textViewOutlet.text = article.first?.description
                 }
             })
         }
