@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rj2-1V-2xz">
-                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="578"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="30" id="5HB-8j-cex">
                                     <size key="itemSize" width="128" height="128"/>
@@ -69,13 +69,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.062745098039215685" green="0.10588235294117647" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="whL-Ir-gqv" firstAttribute="top" secondItem="rj2-1V-2xz" secondAttribute="bottom" id="B1h-1Z-1he"/>
-                            <constraint firstItem="rj2-1V-2xz" firstAttribute="top" secondItem="jwK-K5-xhd" secondAttribute="bottom" id="TIG-5u-dlh"/>
+                            <constraint firstItem="rj2-1V-2xz" firstAttribute="leading" secondItem="GmT-g5-aZr" secondAttribute="leading" id="I2E-dN-rCK"/>
+                            <constraint firstAttribute="trailing" secondItem="rj2-1V-2xz" secondAttribute="trailing" id="Nof-F6-5Kl"/>
                             <constraint firstItem="iGq-6A-coM" firstAttribute="leading" secondItem="GmT-g5-aZr" secondAttribute="leading" id="Ys1-OM-75H"/>
-                            <constraint firstItem="rj2-1V-2xz" firstAttribute="leading" secondItem="GmT-g5-aZr" secondAttribute="leadingMargin" id="Zd4-dX-fRY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rj2-1V-2xz" secondAttribute="trailing" id="djO-95-FVI"/>
+                            <constraint firstItem="iGq-6A-coM" firstAttribute="top" secondItem="rj2-1V-2xz" secondAttribute="bottom" id="grD-ZT-uYR"/>
                             <constraint firstItem="whL-Ir-gqv" firstAttribute="top" secondItem="iGq-6A-coM" secondAttribute="bottom" constant="8" id="nzz-UR-fKA"/>
                             <constraint firstAttribute="trailing" secondItem="iGq-6A-coM" secondAttribute="trailing" id="riv-gg-GOW"/>
+                            <constraint firstItem="rj2-1V-2xz" firstAttribute="top" secondItem="jwK-K5-xhd" secondAttribute="bottom" id="wts-OI-4Da"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Eq-5c-ogO"/>
@@ -196,6 +196,9 @@
                                         <state key="normal" title="Read More &gt;">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="readMoreButtonTapped:" destination="YEb-hx-oBb" eventType="touchUpInside" id="sIG-1A-Vgp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

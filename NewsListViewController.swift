@@ -9,19 +9,20 @@
 import UIKit
 
 class NewsListViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         collectionView.dataSource = self
         collectionView.delegate = self
         
         if let source = source {
-            ArticleController.fetchArticleFor(source: source, completion: { (article) in
-                self.articles = article
+            ArticleController.fetchArticleFor(source: source, completion: { (articles) in
+                self.articles = articles
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
-                    self.textViewOutlet.text = article.first?.description
+                    self.textViewOutlet.text = articles.first?.description
+                    self.currentArticle = articles.first
                 }
             })
         }
@@ -40,7 +41,19 @@ class NewsListViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var textViewOutlet: UITextView!
     
-
+    // MARK: - Actions
+    
+    @IBAction func readMoreButtonTapped(_ sender: Any) {
+        if let currentArticle = self.currentArticle {
+            if let url = URL(string: currentArticle.url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
+    
+    
+    
 }
 
 
@@ -66,7 +79,7 @@ extension NewsListViewController: UICollectionViewDelegate, UICollectionViewData
         let visablePoint = CGPoint(x: visableRect.midX, y: visableRect.midY)
         guard let visableIndexPath: IndexPath = collectionView.indexPathForItem(at: visablePoint) else { return }
         
-
+        
         let article = articles[visableIndexPath.row]
         
         self.currentArticle = article
