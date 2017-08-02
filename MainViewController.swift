@@ -54,6 +54,7 @@ class MainViewController: UIViewController {
                     let source = sources[indexPath.row]
                     destinationVC.title = source.name
                     destinationVC.source = source
+                    destinationVC.color = colors[indexPath.row]
                 }
             }
         }

@@ -12,6 +12,7 @@ class NewsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = color
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -31,6 +32,7 @@ class NewsListViewController: UIViewController {
     
     // MARK: - Properties
     
+    var color = UIColor()
     var source: Source?
     var articles: [Article] = []
     
@@ -72,6 +74,8 @@ extension NewsListViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+
         var visableRect = CGRect()
         visableRect.origin = collectionView.contentOffset
         visableRect.size = collectionView.bounds.size
