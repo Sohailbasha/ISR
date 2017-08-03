@@ -17,6 +17,27 @@ class ContainerViewController: UIViewController {
     }
 
     
+    var viewController: UISplitViewController!
+    
+    
+    
+    func setEmbedded(splitViewController: UISplitViewController!) {
+        
+        if splitViewController != nil {
+            viewController = splitViewController
+            
+            
+            self.addChildViewController(viewController)
+            self.view.addSubview(viewController.view)
+            viewController.didMove(toParentViewController: self)
+            
+            
+            
+            let traitCollection = UITraitCollection(horizontalSizeClass: .regular)
+            
+            self.setOverrideTraitCollection(traitCollection, forChildViewController: viewController)
+        }
+    }
     
     
     
