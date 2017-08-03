@@ -12,7 +12,7 @@ class NewsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = color
+        
         
         collectionView.dataSource = self
         collectionView.delegate = self
