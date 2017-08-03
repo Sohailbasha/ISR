@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
                     let source = sources[indexPath.row]
                     destinationVC.title = source.name
                     destinationVC.source = source
-//                    destinationVC.color = colors[indexPath.row]
+
                 }
             }
         }
@@ -70,10 +70,11 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sourceCell", for: indexPath) as? SourceCollectionViewCell
         let source = sources[indexPath.row]
-//        cell?.backgroundColor = colors[indexPath.row]
         cell?.updateWith(source: source)
         return cell ?? UICollectionViewCell()
     }
+    
+    
 }
 
 
