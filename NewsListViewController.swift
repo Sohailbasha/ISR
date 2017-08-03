@@ -32,7 +32,7 @@ class NewsListViewController: UIViewController {
     
     // MARK: - Properties
     
-    var color = UIColor()
+    
     var source: Source?
     var articles: [Article] = []
     
@@ -45,14 +45,14 @@ class NewsListViewController: UIViewController {
     
     // MARK: - Actions
     
-    @IBAction func readMoreButtonTapped(_ sender: Any) {
-        if let currentArticle = self.currentArticle {
-            if let url = URL(string: currentArticle.url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-        }
-    }
-    
+//    @IBAction func readMoreButtonTapped(_ sender: Any) {
+//        if let currentArticle = self.currentArticle {
+//            if let url = URL(string: currentArticle.url) {
+//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//            }
+//        }
+//    }
+//    
     
     
     
@@ -73,24 +73,27 @@ extension NewsListViewController: UICollectionViewDelegate, UICollectionViewData
         return cell ?? UICollectionViewCell()
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
-
-        var visableRect = CGRect()
-        visableRect.origin = collectionView.contentOffset
-        visableRect.size = collectionView.bounds.size
-        
-        let visablePoint = CGPoint(x: visableRect.midX, y: visableRect.midY)
-        guard let visableIndexPath: IndexPath = collectionView.indexPathForItem(at: visablePoint) else { return }
-        
-        
-        let article = articles[visableIndexPath.row]
-        
-        self.currentArticle = article
-        textViewOutlet.text = article.description
-        
-        print(visableIndexPath)
-    }
+    
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        
+//
+//        var visableRect = CGRect()
+//        visableRect.origin = collectionView.contentOffset
+//        visableRect.size = collectionView.bounds.size
+//        
+//        let visablePoint = CGPoint(x: visableRect.midX, y: visableRect.midY)
+//        guard let visableIndexPath: IndexPath = collectionView.indexPathForItem(at: visablePoint) else { return }
+//        
+//        
+//        let article = articles[visableIndexPath.row]
+//        
+//        /*
+//        self.currentArticle = article
+//        textViewOutlet.text = article.description
+//         */
+//        
+//        print(visableIndexPath)
+//    }
     
 }
 
