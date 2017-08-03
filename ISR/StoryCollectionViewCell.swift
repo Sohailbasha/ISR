@@ -13,8 +13,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
     
     override func draw(_ rect: CGRect) {
         
-        self.layer.cornerRadius = 20
-        
+//        self.layer.cornerRadius = 20
         /*
         self.contentView.layer.masksToBounds = true
         let color = #colorLiteral(red: 0.6817893401, green: 0.6817893401, blue: 0.6817893401, alpha: 0.3031892123)
@@ -31,24 +30,20 @@ class StoryCollectionViewCell: UICollectionViewCell {
     
     
     func updateWith(article: Article) {
-        
-        DispatchQueue.main.async {
-            self.titleOutlet.text = article.title
-
-        }
-        
-        ImageController.image(forURL: article.imageEndPoint, completion: { (articleImage) in
-            if let image = articleImage {
-                self.imageView.image = image
-            }
-        })
+//        
+//        DispatchQueue.main.async {
+//            self.titleOutlet.text = article.title
+//
+//        }
+//        
+//        ImageController.image(forURL: article.imageEndPoint, completion: { (articleImage) in
+//            if let image = articleImage {
+//                self.imageView.image = image
+//            }
+//        })
     }
     
     
-    
-    @IBOutlet var titleOutlet: UILabel!
-    @IBOutlet var authorOutlet: UILabel!
-    @IBOutlet var textView: UITextView!
-    @IBOutlet var imageView: UIImageView!
+
     
 }
