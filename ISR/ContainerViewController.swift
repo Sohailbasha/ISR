@@ -34,23 +34,30 @@ class ContainerViewController: UIViewController {
             
             
             let traitCollection = UITraitCollection(horizontalSizeClass: .regular)
-            
             self.setOverrideTraitCollection(traitCollection, forChildViewController: viewController)
         }
     }
     
     
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    /* Hides the tableView when in Portrait Mode, and will appear again in Landscape Mode.
+     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if size.width > size.height {
+            
+            let traitCollection = UITraitCollection(horizontalSizeClass: .regular)
+            self.setOverrideTraitCollection(traitCollection, forChildViewController: viewController)
+            
+        } else {
+            self.setOverrideTraitCollection(nil, forChildViewController: viewController)
+        }
+        
+        super.viewWillTransition(to: size, with: coordinator)
     }
     */
+    
+    
+    
+
 
 }

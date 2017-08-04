@@ -13,7 +13,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
     
     override func draw(_ rect: CGRect) {
         
-//        self.layer.cornerRadius = 20
+//        self.layer.cornerRadius = 50
         /*
         self.contentView.layer.masksToBounds = true
         let color = #colorLiteral(red: 0.6817893401, green: 0.6817893401, blue: 0.6817893401, alpha: 0.3031892123)

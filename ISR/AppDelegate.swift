@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         splitViewController?.delegate = self
         splitViewController?.preferredDisplayMode = UISplitViewControllerDisplayMode.allVisible
         
+        
+        splitViewController?.preferredPrimaryColumnWidthFraction = 0.35
+        
+        
         let containerViewcontroller: ContainerViewController = ContainerViewController()
         containerViewcontroller.setEmbedded(splitViewController: splitViewController)
         
