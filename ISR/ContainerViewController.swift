@@ -31,17 +31,12 @@ class ContainerViewController: UIViewController {
             self.view.addSubview(viewController.view)
             viewController.didMove(toParentViewController: self)
             
-            
-            
-            let traitCollection = UITraitCollection(horizontalSizeClass: .regular)
-            self.setOverrideTraitCollection(traitCollection, forChildViewController: viewController)
         }
     }
     
     
     
-    /* Hides the tableView when in Portrait Mode, and will appear again in Landscape Mode.
-     
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if size.width > size.height {
             
@@ -54,10 +49,5 @@ class ContainerViewController: UIViewController {
         
         super.viewWillTransition(to: size, with: coordinator)
     }
-    */
-    
-    
-    
-
 
 }

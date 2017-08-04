@@ -27,32 +27,25 @@ class NewsListViewController: UIViewController {
                 }
             })
         }
-        
-        
-        
     }
     
-    // MARK: - Properties
     
+    // MARK: - Properties
     
     var source: Source?
     var articles: [Article] = []
     
     var currentArticle: Article?
     
+    
     // MARK: - OUtlets
     
     @IBOutlet var collectionView: UICollectionView!
-    
-    
 
-    
-    
 }
 
 
 extension NewsListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return articles.count
@@ -65,27 +58,14 @@ extension NewsListViewController: UICollectionViewDelegate, UICollectionViewData
         return cell ?? UICollectionViewCell()
     }
     
-    
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        
-//
-//        var visableRect = CGRect()
-//        visableRect.origin = collectionView.contentOffset
-//        visableRect.size = collectionView.bounds.size
-//        
-//        let visablePoint = CGPoint(x: visableRect.midX, y: visableRect.midY)
-//        guard let visableIndexPath: IndexPath = collectionView.indexPathForItem(at: visablePoint) else { return }
-//        
-//        
-//        let article = articles[visableIndexPath.row]
-//        
-//        /*
-//        self.currentArticle = article
-//        textViewOutlet.text = article.description
-//         */
-//        
-//        print(visableIndexPath)
-//    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenSize = UIScreen.main.bounds
+        let height: CGFloat = screenSize.height
+        let width: CGFloat = screenSize.width
+        
+        
+        return CGSize(width: width - (width * 0.4), height: height*0.3)
+    }
     
 }
 
