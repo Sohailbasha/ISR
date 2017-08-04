@@ -24,18 +24,11 @@ class NewsSourceTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-
-
-
+        
+        tableView.tableFooterView = UIView()
     }
 
     var sources: [Source] = []
-    
-    
-    
-    
-    
-    
     
 
     // MARK: - Table view data source

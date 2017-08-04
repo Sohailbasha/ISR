@@ -28,6 +28,8 @@ class NewsListViewController: UIViewController {
             })
         }
         
+        
+        
     }
     
     // MARK: - Properties
@@ -43,18 +45,7 @@ class NewsListViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     
-    
-    // MARK: - Actions
-    
-//    @IBAction func readMoreButtonTapped(_ sender: Any) {
-//        if let currentArticle = self.currentArticle {
-//            if let url = URL(string: currentArticle.url) {
-//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//            }
-//        }
-//    }
-//    
-    
+
     
     
 }
