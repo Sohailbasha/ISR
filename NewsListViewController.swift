@@ -22,8 +22,8 @@ class NewsListViewController: UIViewController {
                 self.articles = articles
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
-                    self.textViewOutlet.text = articles.first?.description
-                    self.currentArticle = articles.first
+//                    self.textViewOutlet.text = articles.first?.description
+//                    self.currentArticle = articles.first
                 }
             })
         }
@@ -41,6 +41,9 @@ class NewsListViewController: UIViewController {
     // MARK: - OUtlets
     
     @IBOutlet var collectionView: UICollectionView!
+    
+    
+    /*
     @IBOutlet var textViewOutlet: UITextView!
     
     // MARK: - Actions
@@ -52,7 +55,7 @@ class NewsListViewController: UIViewController {
             }
         }
     }
-    
+    */
     
     
     
@@ -73,6 +76,11 @@ extension NewsListViewController: UICollectionViewDelegate, UICollectionViewData
         return cell ?? UICollectionViewCell()
     }
     
+    
+    
+    
+    
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
 
@@ -86,8 +94,8 @@ extension NewsListViewController: UICollectionViewDelegate, UICollectionViewData
         
         let article = articles[visableIndexPath.row]
         
-        self.currentArticle = article
-        textViewOutlet.text = article.description
+//        self.currentArticle = article
+//        textViewOutlet.text = article.description
         
         print(visableIndexPath)
     }
