@@ -15,7 +15,6 @@ class NewsListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        
         if let source = source {
             ArticleController.fetchArticleFor(source: source, completion: { (articles) in
                 self.articles = articles
@@ -87,7 +86,6 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
         
         return height
     }
-    
     
 }
 

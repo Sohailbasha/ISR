@@ -15,11 +15,8 @@ class ContainerViewController: UIViewController {
 
     }
 
-    
     var viewController: UISplitViewController!
-    
-    
-    
+
     func setEmbedded(splitViewController: UISplitViewController!) {
         
         if splitViewController != nil {
@@ -32,9 +29,6 @@ class ContainerViewController: UIViewController {
             
         }
     }
-    
-    
-    
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if size.width > size.height {
