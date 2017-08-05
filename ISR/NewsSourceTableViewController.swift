@@ -34,7 +34,6 @@ class NewsSourceTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return sources.count
     }
 
@@ -45,7 +44,6 @@ class NewsSourceTableViewController: UITableViewController {
 
         let source = sources[indexPath.row]
         cell.textLabel?.text = source.name
-
         return cell
     }
     

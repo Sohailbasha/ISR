@@ -30,6 +30,4 @@ class ArticleDetailTableViewCell: UITableViewCell {
     @IBOutlet var storyDesc: UITextView!
     @IBOutlet var readOnWebsiteButton: UIButton!
     
-    
-
 }
