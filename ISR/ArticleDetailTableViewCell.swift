@@ -15,6 +15,7 @@ class ArticleDetailTableViewCell: UITableViewCell {
         DispatchQueue.main.async {
             self.storyTitle.text = story.title
             self.storyDesc.text = story.description
+            self.urlString = story.url
         }
         
         
@@ -22,6 +23,15 @@ class ArticleDetailTableViewCell: UITableViewCell {
             if let image = storyImage {
                 self.storyImage.image = image
             }
+        }
+    }
+    
+    var urlString = ""
+    
+    @IBAction func openWebPage(_ sender: Any) {
+        if let url = URL(string: urlString){
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            
         }
     }
     

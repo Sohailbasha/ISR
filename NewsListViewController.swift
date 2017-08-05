@@ -51,9 +51,7 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ArticleDetailTableViewCell
         let story = articles[indexPath.row]
         cell?.updateCellWith(story: story)
-        if indexPath.row % 2 == 0 {
-            cell?.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.968627451, blue: 0.9803921569, alpha: 1)
-        }
+        cell?.backgroundColor = #colorLiteral(red: 0.9607843137, green: 0.968627451, blue: 0.9803921569, alpha: 1)
         return cell ?? UITableViewCell()
     }
     

@@ -109,7 +109,9 @@
 		FD200FAA1F2FA7C80029574E /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FDE1AF231F33C61800015432 /* Feature Split View */,
+				FDE1AF241F33D84000015432 /* ContainerViewController.swift */,
+				FDE1AF211F33C60F00015432 /* NewsSourceTableViewController.swift */,
+				FD200FB41F2FC5A50029574E /* NewsListViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -130,16 +132,6 @@
 				FD200FBA1F2FEF240029574E /* ImageController.swift */,
 			);
 			name = Tools;
-			sourceTree = "<group>";
-		};
-		FDE1AF231F33C61800015432 /* Feature Split View */ = {
-			isa = PBXGroup;
-			children = (
-				FDE1AF241F33D84000015432 /* ContainerViewController.swift */,
-				FDE1AF211F33C60F00015432 /* NewsSourceTableViewController.swift */,
-				FD200FB41F2FC5A50029574E /* NewsListViewController.swift */,
-			);
-			name = "Feature Split View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
