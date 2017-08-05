@@ -59,5 +59,9 @@ class NewsSourceTableViewController: UITableViewController {
         return "Select news source to begin reading stories"
     }
     
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "Top sports news from around the world"
+    }
+    
 
 }
