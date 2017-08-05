@@ -12,16 +12,15 @@ class NewsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        tableView.delegate = self
+        tableView.dataSource = self
         
         
         if let source = source {
             ArticleController.fetchArticleFor(source: source, completion: { (articles) in
                 self.articles = articles
                 DispatchQueue.main.async {
-                    
-
+    
                     self.currentArticle = articles.first
                 }
             })
@@ -39,13 +38,28 @@ class NewsListViewController: UIViewController {
     
     // MARK: - OUtlets
     
+    @IBOutlet var tableView: UITableView!
     
 
 }
 
-
-
-
+extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ArticleDetailTableViewCell
+        
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    
+    
+}
 
 
 
