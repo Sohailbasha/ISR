@@ -9,16 +9,27 @@
 import UIKit
 
 class ArticleDetailTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    
+    func updateCellWith(story: Article) {
+        DispatchQueue.main.async {
+            self.storyTitle.text = story.title
+            self.storyDesc.text = story.description
+        }
+        
+        
+        ImageController.image(forURL: story.imageEndPoint) { (storyImage) in
+            if let image = storyImage {
+                self.storyImage.image = image
+            }
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
+    @IBOutlet var storyImage: UIImageView!
+    @IBOutlet var storyTitle: UILabel!
+    @IBOutlet var storyDesc: UITextView!
+    @IBOutlet var readOnWebsiteButton: UIButton!
+    
+    
 
 }

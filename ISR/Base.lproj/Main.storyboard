@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,17 +22,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="257" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qQo-Si-0Jl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="357" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qQo-Si-0Jl">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="257" id="UPH-xX-AOb" customClass="ArticleDetailTableViewCell" customModule="ISR" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="257"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="357" id="UPH-xX-AOb" customClass="ArticleDetailTableViewCell" customModule="ISR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="357"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UPH-xX-AOb" id="N4c-i8-Tmt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="256.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="356.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pMB-0y-1ew">
+                                                    <rect key="frame" x="8" y="8" width="199" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="199" id="aJl-oE-lbd"/>
+                                                        <constraint firstAttribute="height" constant="160" id="eOK-pz-eni"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aH-nv-ddp">
+                                                    <rect key="frame" x="215" y="8" width="152" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="WORDS" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0p-TN-zeR">
+                                                    <rect key="frame" x="8" y="176" width="359" height="33"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jt2-hZ-jJ2">
+                                                    <rect key="frame" x="215" y="140" width="152" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="Read On Website"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9aH-nv-ddp" firstAttribute="top" secondItem="N4c-i8-Tmt" secondAttribute="topMargin" id="1GE-V5-gKc"/>
+                                                <constraint firstItem="jt2-hZ-jJ2" firstAttribute="trailing" secondItem="N4c-i8-Tmt" secondAttribute="trailingMargin" id="2L6-Yo-iGD"/>
+                                                <constraint firstItem="y0p-TN-zeR" firstAttribute="leading" secondItem="N4c-i8-Tmt" secondAttribute="leadingMargin" id="3aX-Vl-60a"/>
+                                                <constraint firstItem="y0p-TN-zeR" firstAttribute="top" secondItem="jt2-hZ-jJ2" secondAttribute="bottom" constant="8" id="44e-TQ-iYX"/>
+                                                <constraint firstItem="pMB-0y-1ew" firstAttribute="leading" secondItem="N4c-i8-Tmt" secondAttribute="leadingMargin" id="OBc-wj-ZX0"/>
+                                                <constraint firstItem="jt2-hZ-jJ2" firstAttribute="leading" secondItem="pMB-0y-1ew" secondAttribute="trailing" constant="8" id="TdF-hl-0wV"/>
+                                                <constraint firstItem="9aH-nv-ddp" firstAttribute="leading" secondItem="pMB-0y-1ew" secondAttribute="trailing" constant="8" id="ZXx-zf-FHk"/>
+                                                <constraint firstItem="y0p-TN-zeR" firstAttribute="top" secondItem="pMB-0y-1ew" secondAttribute="bottom" constant="8" id="dUq-Mq-sPh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="y0p-TN-zeR" secondAttribute="trailing" id="gES-jU-DIh"/>
+                                                <constraint firstItem="pMB-0y-1ew" firstAttribute="top" secondItem="N4c-i8-Tmt" secondAttribute="topMargin" id="pLB-Af-Yvu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="description" destination="y0p-TN-zeR" id="yOR-YR-cmG"/>
+                                            <outlet property="readOnWebsiteButton" destination="jt2-hZ-jJ2" id="46g-F9-Oli"/>
+                                            <outlet property="storyDesc" destination="y0p-TN-zeR" id="2cd-MX-vY4"/>
+                                            <outlet property="storyImage" destination="pMB-0y-1ew" id="pBB-pQ-cMl"/>
+                                            <outlet property="storyTitle" destination="9aH-nv-ddp" id="rcq-9B-dq9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

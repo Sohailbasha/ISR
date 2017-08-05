@@ -20,8 +20,8 @@ class NewsListViewController: UIViewController {
             ArticleController.fetchArticleFor(source: source, completion: { (articles) in
                 self.articles = articles
                 DispatchQueue.main.async {
-    
                     self.currentArticle = articles.first
+                    self.tableView.reloadData()
                 }
             })
         }
@@ -52,8 +52,8 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ArticleDetailTableViewCell
-        
-        
+        let story = articles[indexPath.row]
+        cell?.updateCellWith(story: story)
         return cell ?? UITableViewCell()
     }
     
